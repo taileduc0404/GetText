@@ -79,15 +79,11 @@
                                     {
                                         <div>
                                             <h2>Extracted Text</h2>
+                                            <button id="copyButton" data-clipboard-target="#extractedText" style="font-size: smaller;">Copy Text</button>
                                             <p id="extractedText">@Html.Raw(ViewBag.Text)</p>
-                                            <p>
-                                                <button id="copyButton" data-clipboard-target="#extractedText">Copy Text</button>
-                                            </p>
                                         </div>
                                     }
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
@@ -152,13 +148,13 @@
 
     <!-- end info_section -->
     <!-- footer section -->
-    <section class="container-fluid footer_section">
+    @*<section class="container-fluid footer_section">
         <p>
             &copy; 2020 All Rights Reserved By
             <a href="https://html.design/">Free Html Templates</a>
             Distrubuted By <a href="https://themewagon.com">ThemeWagon</a>
         </p>
-    </section>
+    </section>*@
     <!-- footer section -->
 
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
