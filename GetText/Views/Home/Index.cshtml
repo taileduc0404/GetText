@@ -2,7 +2,125 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<body>
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+                    <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                        <span>
+                            FiDGet
+                        </span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                            <ul class="navbar-nav  ">
+                                <li class="nav-item active">
+                                    <a class="nav-link" asp-controller="Home" asp-action="Index">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="FileReader" asp-action="Index">Get Text</a>
+                                </li>
+                            </ul>
+                            <div class="user_option">
+                                <a href="">
+                                    <img src="images/user.png" alt="">
+                                </a>
+                                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- end header section -->
+        <!-- slider section -->
+        <section class=" slider_section position-relative">
+            <div class="container">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="detail-box">
+                                        <div>
+                                            <h2>
+                                                welcome to
+
+                                            </h2>
+                                            <h1>
+                                                FiDGet
+                                            </h1>
+                                            <p>
+                                                Trải nghiệm dịch vụ chuyển đổi văn bản tốt nhất! Hãy tận dụng công cụ của chúng tôi để tải lên các tệp PDF hoặc Word và trích xuất chữ từ tài liệu của bạn ngay lập tức.
+                                            </p>
+                                            <div class="">
+                                                <a asp-controller="FileReader" asp-action="Index">
+                                                    Get Text Now
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- end slider section -->
+    </div>
+
+
+
+
+    <!-- footer section -->
+    <section class="container-fluid footer_section">
+        <p>
+            &copy; 2020 All Rights Reserved By
+            <a href="https://html.design/">Free Html Templates</a>
+            Distrubuted By <a href="https://themewagon.com">ThemeWagon</a>
+        </p>
+    </section>
+    <!-- footer section -->
+
+    <script type="text/javascript" src="~/template/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="~/template/js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <!-- owl carousel script
+      -->
+    <script type="text/javascript">
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 0,
+            navText: [],
+            center: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+    </script>
+    <!-- end owl carousel script -->
+
+</body>

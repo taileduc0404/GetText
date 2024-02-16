@@ -1,22 +1,193 @@
-﻿<div class="file-reader-container">
-    <h1>@ViewData["Title"]</h1>
+﻿
 
-    <form method="post" enctype="multipart/form-data" asp-controller="FileReader" asp-action="UploadFile">
-        <input type="file" name="file" />
-        <input type="submit" value="Upload" />
-    </form>
 
-    @if (ViewBag.Text != null)
-    {
-        <div>
-            <h2>Extracted Text</h2>
-            <p id="extractedText">@Html.Raw(ViewBag.Text)</p>
-            <p>
-                <button id="copyButton" data-clipboard-target="#extractedText">Copy Text</button>
-            </p>
+
+
+
+
+
+
+
+
+
+
+<body class="sub_page">
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+                    <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                        <span>
+                            FiDGet
+                        </span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                            <ul class="navbar-nav  ">
+                                <li class="nav-item active">
+                                    <a class="nav-link" asp-controller="Home" asp-action="Index">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="FileReader" asp-action="Index">Get Text</a>
+                                </li>
+                            </ul>
+                          @*  <div class="user_option">
+                                <a href="">
+                                    <img src="images/user.png" alt="">
+                                </a>
+                                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                                </form>
+                            </div>*@
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- end header section -->
+    </div>
+
+    <!-- contact section -->
+
+    <section class="contact_section layout_padding">
+        <div class="container">
+
+            <div class="heading_container">
+                <h2>
+                    Upload a file to get text
+                </h2>
+            </div>
+            <div class="">
+                <div class="">
+                    <div class="row">
+                        <div class="col-md-9 mx-auto">
+                            <div class="contact-form">
+                                <div class="file-reader-container">
+                                    <h1>@ViewData["Title"]</h1>
+
+                                    <form method="post" enctype="multipart/form-data" asp-controller="FileReader" asp-action="UploadFile">
+                                        <input type="file" name="file" />
+                                        <input type="submit" value="Get" />
+                                    </form>
+
+                                    @if (ViewBag.Text != null)
+                                    {
+                                        <div>
+                                            <h2>Extracted Text</h2>
+                                            <p id="extractedText">@Html.Raw(ViewBag.Text)</p>
+                                            <p>
+                                                <button id="copyButton" data-clipboard-target="#extractedText">Copy Text</button>
+                                            </p>
+                                        </div>
+                                    }
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map_img-box">
+                <img src="images/map-img.png" alt="">
+            </div>
         </div>
-    }
-</div>
+    </section>
+
+
+    <!-- end contact section -->
+    <!-- info section -->
+    <section class="info_section ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="info_contact">
+                        <h5>
+                            About Us
+                        </h5>
+                        <div>
+                            <div class="img-box">
+                                <img src="images/location-white.png" width="18px" alt="">
+                            </div>
+                            <p>
+                                Address
+                            </p>
+                        </div>
+                        <div>
+                            <div class="img-box">
+                                <img src="images/telephone-white.png" width="12px" alt="">
+                            </div>
+                            <p>
+                                +01 1234567890
+                            </p>
+                        </div>
+                        <div>
+                            <div class="img-box">
+                                <img src="images/envelope-white.png" width="18px" alt="">
+                            </div>
+                            <p>
+                                demo@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info_info">
+                        <h5>
+                            Informations
+                        </h5>
+                        <p>
+                            Trải nghiệm dịch vụ chuyển đổi văn bản tốt nhất! Hãy tận dụng công cụ của chúng tôi để tải lên các tệp PDF hoặc Word và trích xuất chữ từ tài liệu của bạn ngay lập tức.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end info_section -->
+    <!-- footer section -->
+    <section class="container-fluid footer_section">
+        <p>
+            &copy; 2020 All Rights Reserved By
+            <a href="https://html.design/">Free Html Templates</a>
+            Distrubuted By <a href="https://themewagon.com">ThemeWagon</a>
+        </p>
+    </section>
+    <!-- footer section -->
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <!-- owl carousel script
+      -->
+    <script type="text/javascript">
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 0,
+            navText: [],
+            center: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+    </script>
+    <!-- end owl carousel script -->
+
+</body>
 
 
 
@@ -24,17 +195,17 @@
 
 
 <script>
-	document.addEventListener('DOMContentLoaded', function () {
-		var copyButton = document.getElementById('copyButton');
-		var clipboard = new ClipboardJS(copyButton);
+    document.addEventListener('DOMContentLoaded', function () {
+        var copyButton = document.getElementById('copyButton');
+        var clipboard = new ClipboardJS(copyButton);
 
-		clipboard.on('success', function (e) {
-			alert('Text copied to clipboard!');
-			e.clearSelection();
-		});
+        clipboard.on('success', function (e) {
+            alert('Text copied to clipboard!');
+            e.clearSelection();
+        });
 
-		clipboard.on('error', function (e) {
-			alert('Unable to copy. Please try manually.');
-		});
-	});
+        clipboard.on('error', function (e) {
+            alert('Unable to copy. Please try manually.');
+        });
+    });
 </script>
