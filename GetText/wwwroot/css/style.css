@@ -1,0 +1,75 @@
+﻿/* styles.css */
+
+.file-reader-container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .file-reader-container h1 {
+        font-size: 32px;
+        color: #007bff;
+        margin-bottom: 20px;
+    }
+
+    .file-reader-container form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .file-reader-container input[type="file"],
+    .file-reader-container input[type="submit"] {
+        margin-bottom: 10px;
+    }
+
+    .file-reader-container input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .file-reader-container div {
+        margin-top: 20px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .file-reader-container h2 {
+        font-size: 20px;
+        color: #007bff;
+    }
+
+    .file-reader-container p {
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+#copyButton {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+    #copyButton:hover {
+        background-color: #0056b3;
+    }

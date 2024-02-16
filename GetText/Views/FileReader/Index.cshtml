@@ -1,0 +1,40 @@
+﻿<div class="file-reader-container">
+    <h1>@ViewData["Title"]</h1>
+
+    <form method="post" enctype="multipart/form-data" asp-controller="FileReader" asp-action="UploadFile">
+        <input type="file" name="file" />
+        <input type="submit" value="Upload" />
+    </form>
+
+    @if (ViewBag.Text != null)
+    {
+        <div>
+            <h2>Extracted Text</h2>
+            <p id="extractedText">@Html.Raw(ViewBag.Text)</p>
+            <p>
+                <button id="copyButton" data-clipboard-target="#extractedText">Copy Text</button>
+            </p>
+        </div>
+    }
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		var copyButton = document.getElementById('copyButton');
+		var clipboard = new ClipboardJS(copyButton);
+
+		clipboard.on('success', function (e) {
+			alert('Text copied to clipboard!');
+			e.clearSelection();
+		});
+
+		clipboard.on('error', function (e) {
+			alert('Unable to copy. Please try manually.');
+		});
+	});
+</script>
